@@ -17,7 +17,7 @@ public class Boomberman {
 		if (n <= 1)
 			return grid;
 
-		// IN THE BOARD, EVERY 2 SECONDS IS FULL OF BOMBS
+		// IN THE BOARD ON EVEN SECONDS IS FULL OF BOMBS
 		if (n % 2 == 0) {
 			for (int i = 0; i < grid.length; i++) {
 				grid[i] = grid[i].replace(".", "O");
@@ -27,8 +27,6 @@ public class Boomberman {
 
 		// The next code will only evaluate for n=3 and n=5, after that, the board
 		// income into an infinite loop
-
-		int columns = grid[0].length(); // To avoid to use this definition
 
 		int count = 0;
 
@@ -65,11 +63,11 @@ public class Boomberman {
 				else
 					flagDown = false;//Last Line
 
-				for (int j = 0; j < columns; j++) {
+				for (int j = 0; j < grid[i].length(); j++) {
 					
 					if (tmpMid[j] == '1') {
 						
-						tmpMid[j] = '.';// The bomb explote
+						tmpMid[j] = '.';// The bomb burst
 
 						if (j != 0)
 							tmpMid[j - 1] = '.';
@@ -141,20 +139,6 @@ public class Boomberman {
 		for (String string : grid) {
 			System.out.println(string);
 		}
-
-//		char[][] charutil = new char[grid.length][grid[0].length()];
-//		
-//		
-//		for (int i = 0; i < grid.length; i++) {
-//			charutil[i] = grid[i].toCharArray();
-//		}
-//		
-//		for (char[] cs : charutil) {
-//			for (char cs2 : cs) {
-//				System.out.print(cs2);
-//			}
-//			System.out.println();
-//		}
 
 	}// END MAIN METHOD
 

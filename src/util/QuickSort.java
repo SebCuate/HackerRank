@@ -5,10 +5,9 @@ public class QuickSort {
 	public static void main(String[] args) {
 		
 		int[] arr = {91,82,23,54,65,46,37,78,19,00};
-		
-		arr = quicksortAsc(arr, 0, arr.length-1);
-//		arr = quicksortDesc(arr, 0, arr.length-1);
-		
+//		arr = 
+				quicksortAsc(arr, 0, arr.length-1);
+//				quicksortDesc(arr, 0, arr.length-1);
 		
 		for (int i : arr) {
 			System.out.print(i + " ");

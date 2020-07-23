@@ -6,7 +6,7 @@ public class QuickSort {
 		
 		int[] arr = {91,82,23,54,65,46,37,78,19,00};
 		
-//		arr = quicksortAsc(arr, 0, arr.length-1);
+		arr = quicksortAsc(arr, 0, arr.length-1);
 //		arr = quicksortDesc(arr, 0, arr.length-1);
 		
 		

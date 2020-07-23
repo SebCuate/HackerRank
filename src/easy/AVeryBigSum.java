@@ -38,7 +38,7 @@ public class AVeryBigSum {
 //        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
 		for (int i = 0; i < arCount; i++) {
-			long arItem = Long.parseLong(arItems[i]);
+			long arItem = Long.valueOf(arItems[i]);
 			ar[i] = arItem;
 		}
 

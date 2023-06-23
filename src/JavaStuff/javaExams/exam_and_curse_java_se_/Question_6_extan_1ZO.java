@@ -1,4 +1,4 @@
-package exam_and_curse_java_se_;
+package JavaStuff.javaExams.exam_and_curse_java_se_;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,15 +12,18 @@ public class Question_6_extan_1ZO {
 		} catch (IOException e) {
 			System.out.print("c");
 			return;
-		} finally {
+		} catch (RuntimeException e) {
+			System.out.print("g");
+		} 
+		finally {
 			System.out.print("d");
 		}
 		System.out.print("f");
 	}
 
-	public static void doA() {
+	public static void doA() throws IndexOutOfBoundsException{
 		System.out.print("a");
-		if (false) {
+		if (true) {
 			throw new IndexOutOfBoundsException();
 		}
 	}

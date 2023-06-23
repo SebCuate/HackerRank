@@ -1,4 +1,4 @@
-package exam_and_curse_java_se_;
+package JavaStuff.javaExams.exam_and_curse_java_se_;
 
 import java.util.ArrayList;
 import java.util.List;

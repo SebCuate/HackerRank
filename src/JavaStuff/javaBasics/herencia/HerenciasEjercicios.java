@@ -1,6 +1,4 @@
-package JavaStuff.javaBasics;
-
-import lombok.AllArgsConstructor;
+package JavaStuff.javaBasics.herencia;
 
 public class HerenciasEjercicios {
 	

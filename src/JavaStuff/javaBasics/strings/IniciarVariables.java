@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics;
+package JavaStuff.javaBasics.strings;
 
 public class IniciarVariables {
 	
@@ -22,7 +22,8 @@ public class IniciarVariables {
 		short s2 = (short) i2;
 		byte b2 = (byte) s2;
 		char c2 = (char) b2;
-//		
+		
+		int i3 = Integer.parseInt("123");
 	}
 
 }

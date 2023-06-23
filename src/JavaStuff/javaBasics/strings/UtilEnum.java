@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics;
+package JavaStuff.javaBasics.strings;
 
 public enum UtilEnum {
 

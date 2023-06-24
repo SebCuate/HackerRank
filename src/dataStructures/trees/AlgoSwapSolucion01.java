@@ -19,32 +19,68 @@ import java.util.*;
  *
  */
 public class AlgoSwapSolucion01 {
-	static NodeAlgoSwapSolucion01 root = new NodeAlgoSwapSolucion01(1);
+	
+//	static Node tree = new Node(1);
 
 	public static void main(String... arg) {
-		Scanner sc = new Scanner(System.in);
-		int n, t, k;
-		n = sc.nextInt();
-		int[][] tree = new int[n][2];
-		for (int i = 0; i < n; i++) {
-			tree[i][0] = sc.nextInt();
-			tree[i][1] = sc.nextInt();
-		}
-		root = ConstuctTree(tree);
+		
+		//Build a Binary Tree
+    	Node tree = new Node(1); //Depth 1
+        tree.left = new Node(2); //Depth 2
+        tree.right = new Node(3);
+        tree.left.left = new Node(4); //Depth 3
+        tree.left.right = new Node(5);
+        tree.right.left = new Node(6);
+        tree.right.right = new Node(7);
+        tree.left.left.left = new Node(8); //Depth 4
+        tree.left.left.right = new Node(9);
+        tree.left.right.left = new Node(10);
+        tree.left.right.right = new Node(11);
+        tree.right.left.left = new Node(12);
+        tree.right.left.right = new Node(13);
+        tree.right.right.left = new Node(14);
+        tree.right.right.right = new Node(15);
+		tree.left.left.left.left = new Node(16); //Depth 5
+        tree.left.left.left.right = new Node(17);
+        tree.left.left.right.left = new Node(18);
+        tree.left.left.right.right = new Node(19);
+        tree.left.right.left.left = new Node(20);
+        tree.left.right.left.right = new Node(21);
+        tree.left.right.right.left = new Node(22);
+        tree.left.right.right.right = new Node(23);
+		tree.right.left.left.left = new Node(24);
+        tree.right.left.left.right = new Node(25);
+        tree.right.left.right.left = new Node(26);
+        tree.right.left.right.right = new Node(27);
+        tree.right.right.left.left = new Node(28);
+        tree.right.right.left.right = new Node(29);
+        tree.right.right.right.left = new Node(30);
+        tree.right.right.right.right = new Node(31);
+		
+		
+//		n = sc.nextInt();
+//		int[][] data = new int[n][2];
+//		for (int i = 0; i < n; i++) {
+//			data[i][0] = sc.nextInt();
+//			data[i][1] = sc.nextInt();
+//		}
+//		tree = ConstuctTree(data);
+        
+        Scanner sc = new Scanner(System.in);
+        int t, k;
 		t = sc.nextInt();
 		while (t-- > 0) {
 			k = sc.nextInt();
-			levelWise(root, k);
-			InOrderRec(root);
-			System.out.println();
+			levelWise(tree, k);
+			inOrder(tree);
 		}
 	}
 
-	private static void levelWise(NodeAlgoSwapSolucion01 root, int k) {
-		Stack<NodeAlgoSwapSolucion01> currentlevel = new Stack<>();
-		Stack<NodeAlgoSwapSolucion01> nextlevel = new Stack<>();
+	private static void levelWise(Node root, int k) {
+		Stack<Node> currentlevel = new Stack<>();
+		Stack<Node> nextlevel = new Stack<>();
 		int level = 1;
-		NodeAlgoSwapSolucion01 temp;
+		Node temp;
 		currentlevel.push(root);
 		while (!currentlevel.empty()) {
 			temp = currentlevel.peek();
@@ -54,43 +90,51 @@ public class AlgoSwapSolucion01 {
 			if (temp.right != null)
 				nextlevel.push(temp.right);
 			if (level % k == 0) {
-				NodeAlgoSwapSolucion01 n = temp.left;
+				Node n = temp.left;
 				temp.left = temp.right;
 				temp.right = n;
 			}
 			if (currentlevel.empty()) {
-				Stack<NodeAlgoSwapSolucion01> t = currentlevel;
+				Stack<Node> t = currentlevel;
 				currentlevel = nextlevel;
 				nextlevel = t;
 				level++;
 			}
 		}
 	}
-
-	private static void InOrderRec(NodeAlgoSwapSolucion01 root) {
-		if (root == null)
-			return;
-		InOrderRec(root.left);
-		sout(root.data);
-		InOrderRec(root.right);
+	
+	private static void inOrder(Node node) {
+		
+		if (node == null)
+            return;
+ 
+        // First recur on left child
+        inOrder(node.left);
+ 
+        // Then print the data of node
+        System.out.print(node.data + " ");
+ 
+        // Now recur on right child
+        inOrder(node.right);
+        
 	}
 
-	private static NodeAlgoSwapSolucion01 ConstuctTree(int[][] tree) {
-		NodeAlgoSwapSolucion01 root = new NodeAlgoSwapSolucion01(1);
-		Queue<NodeAlgoSwapSolucion01> q = new LinkedList<>();
+	private static Node ConstuctTree(int[][] data) {
+		Node root = new Node(1);
+		Queue<Node> q = new LinkedList<>();
 		q.add(root);
-		for (int i = 0; i < tree.length; i++) {
-			NodeAlgoSwapSolucion01 left, right;
-			if (tree[i][0] != -1)
-				left = new NodeAlgoSwapSolucion01(tree[i][0]);
+		for (int i = 0; i < data.length; i++) {
+			Node left, right;
+			if (data[i][0] != -1)
+				left = new Node(data[i][0]);
 			else
 				left = null;
-			if (tree[i][1] != -1)
-				right = new NodeAlgoSwapSolucion01(tree[i][1]);
+			if (data[i][1] != -1)
+				right = new Node(data[i][1]);
 			else
 				right = null;
 
-			NodeAlgoSwapSolucion01 temp = q.remove();
+			Node temp = q.remove();
 			temp.left = left;
 			temp.right = right;
 
@@ -101,19 +145,7 @@ public class AlgoSwapSolucion01 {
 		}
 		return root;
 	}
-
-	private static void sout(int info) {
-		System.out.printf("%d ", info);
-	}
-}
-
-class NodeAlgoSwapSolucion01 {
-	int data;
-	NodeAlgoSwapSolucion01 left, right;
-
-	NodeAlgoSwapSolucion01(int item) {
-		data = item;
-		left = null;
-		right = null;
-	}
+	
+	
+	
 }

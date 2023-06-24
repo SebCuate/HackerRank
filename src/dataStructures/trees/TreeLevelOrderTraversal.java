@@ -3,28 +3,10 @@ package dataStructures.trees;
 import java.util.*;
 import java.io.*;
 
-class NodeForTreeLevelOrderTraversal {
-	NodeForTreeLevelOrderTraversal left;
-	NodeForTreeLevelOrderTraversal right;
-    int data;
-    
-    NodeForTreeLevelOrderTraversal(int data) {
-        this.data = data;
-        left = null;
-        right = null;
-    }
-}
 
-class TreeLevelOrderTraversal {
+public class TreeLevelOrderTraversal {
 
-	/* 
-    
-    class Node 
-    	int data;
-    	Node left;
-    	Node right;
-	*/
-	private static void levelOrder(NodeForTreeLevelOrderTraversal root) {
+	private static void levelOrder(Node root) {
 		
 		int h = height(root);
 		
@@ -34,7 +16,7 @@ class TreeLevelOrderTraversal {
 
     }
 	
-	private static void printLevel(NodeForTreeLevelOrderTraversal root, int level) {
+	private static void printLevel(Node root, int level) {
 		if (root == null)
             return;
         if (level == 0)
@@ -45,18 +27,18 @@ class TreeLevelOrderTraversal {
         }
 	}
 	
-	private static int height(NodeForTreeLevelOrderTraversal root) {
+	private static int height(Node root) {
       	if(root == null) {
             return -1;
         }
         return Math.max(height(root.left), height(root.right)) + 1;
     }
 
-	public static NodeForTreeLevelOrderTraversal insert(NodeForTreeLevelOrderTraversal root, int data) {
+	public static Node insert(Node root, int data) {
         if(root == null) {
-            return new NodeForTreeLevelOrderTraversal(data);
+            return new Node(data);
         } else {
-        	NodeForTreeLevelOrderTraversal cur;
+        	Node cur;
             if(data <= root.data) {
                 cur = insert(root.left, data);
                 root.left = cur;
@@ -71,7 +53,7 @@ class TreeLevelOrderTraversal {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int t = scan.nextInt();
-        NodeForTreeLevelOrderTraversal root = null;
+        Node root = null;
         while(t-- > 0) {
             int data = scan.nextInt();
             root = insert(root, data);

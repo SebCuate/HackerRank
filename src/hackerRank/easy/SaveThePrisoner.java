@@ -1,20 +1,10 @@
-package easy;
+package hackerRank.easy;
 
 public class SaveThePrisoner {
 	
 	static int saveThePrisoner(int n, int m, int s) {
-
-		int _util = s + m - 1;
-		
-		if (_util > n) {
-			if (_util % n == 0) {
-				return n;
-			}
-			return _util % n;
-		}
-
-		return _util;
-
+		int _util = (m+s-1) % n;
+		return _util == 0 ? n: _util;
 	}
 
 	public static void main(String[] args) {

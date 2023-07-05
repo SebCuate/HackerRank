@@ -1,4 +1,4 @@
-package hackerRank.easy;
+package hackerRank.problemSolving.easy;
 
 
 import java.io.*;

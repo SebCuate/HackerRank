@@ -1,4 +1,4 @@
-package medium;
+package hackerRank.problemSolving.medium;
 
 public class AbsolutePermutation {
 	

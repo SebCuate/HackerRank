@@ -1,4 +1,4 @@
-package hackerRank.easy;
+package hackerRank.problemSolving.easy;
 
 public class SaveThePrisoner {
 	

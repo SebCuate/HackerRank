@@ -1,4 +1,4 @@
-package medium;
+package hackerRank.problemSolving.medium;
 
 /**
  * this problem is a infinite cycle, there is a helpful solution when n <= 1

@@ -7,7 +7,7 @@ public class HerenciaMetodos {
 //		Sub s = new Sub();//Good Morning, Potter
 		SubSub s = new SubSub();//Good Morning, Harry Potter
 //		SubSubSub s = new SubSubSub();
-		System.out.println(s.greeting() + ", " + s.name() +  " " + ((Super)s).edad);
+		System.out.println(s.greeting() + ", " + ((Super)s).name() +  " " + ((Super)s).edad);
 	}
 }
 	
@@ -17,6 +17,7 @@ class Super {
 	static String greeting() {return "Good Night";}
 	String name() {return "Harry";}
 }
+
 class Sub extends Super {
 	public Sub() {System.out.println("Soy el constructor de Sub");}
 	Sub(int edad){

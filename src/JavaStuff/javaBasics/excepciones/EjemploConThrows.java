@@ -8,7 +8,7 @@ public class EjemploConThrows {
 		try {
 			tc.m1();
 		} catch (MyException e) {
-			tc.m1();
+//			tc.m1();
 		} finally {
 			tc.m2();
 		}
@@ -23,6 +23,7 @@ public class EjemploConThrows {
 }
 
 class MyException extends Exception {
+	
 }
 
 class TestClass {

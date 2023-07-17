@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics.arraysWork;
+package javaStuff.javaBasics.arraysWork;
 
 public class E1_Array_inicializa {
 

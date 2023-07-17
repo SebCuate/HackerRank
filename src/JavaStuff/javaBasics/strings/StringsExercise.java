@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics.strings;
+package javaStuff.javaBasics.strings;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -8,6 +8,13 @@ public class StringsExercise {
 	
 	public static void main(String[] args) {
 		
+		prueba1();
+//		prueba2();
+//		prueba3();
+//		prueba4();
+	}
+	
+	private static void prueba1() {
 		String s = "";
 		StringBuilder sb = new StringBuilder();
 //		System.out.println(s instanceof );
@@ -17,11 +24,14 @@ public class StringsExercise {
 		String s3 = "hELLO wORLD";
 		String s4 = "Hello World";
 		String s5 = "Hello World mom";
+		String s6 = "Hell0 World mom";
 		
-		System.out.println(s1.compareTo(s2));
-		System.out.println(s1.compareTo(s3));
-		System.out.println(s1.compareTo(s4));
-		System.out.println(s1.compareTo(s5));
+		//Se hace una comparación de char vs char
+		System.out.println(s1.compareTo(s2));//s2 se encuentra en s1, así que regresa s1.length() - s2.length()
+		System.out.println(s1.compareTo(s3));//s3 no se encuentra en s1, por lo que regresa int('H') - int('h') ASCCI de H = 72 ASCII de h = 104
+		System.out.println(s1.compareTo(s4));//s4 tiene el mismo contenido que s1, regresa 0
+		System.out.println(s1.compareTo(s5));//
+		System.out.println(s1.compareTo(s6));//s6 no se encuentra en s1, por lo que regresa int('o') - int('0') ASCCI de o = 111 ASCII de 0 = 48, no nos dice la posición donde se encuentra la primera diferencia
 
 		System.out.println("...................");
 		System.out.println(Arrays.compare(s1.toCharArray(), s2.toCharArray()));
@@ -34,101 +44,101 @@ public class StringsExercise {
 		System.out.println(Arrays.compare(sa1, sa2));
 		System.out.println(Arrays.compare(sa1, sa3));
 		System.out.println(Arrays.compare(sa2, sa3));
-		
-		
 	}
 	
 
-//	public static void main(String[] args) {
-//		
-//		String s1, s2, s3, s4, s5;
-//		
-//		s1 = "java";
-//		s2 = s1.replace('A', 'a'); //Cuando se remplaza un char que no esta en el String regresa el mismo objeto
-//		s3 = s1.replace('a', 'a'); //Cuando se remplaza un char por si mismo regresa el mismo objeto, esto aplica solo con el metodo de char
-//		s4 = s1.replace("A", "a"); //Cuando se remplaza un String que no esta en el String regresa el mismo objeto, esto porque no hubo cambios en el
-//		s5 = s1.replace("a", "a"); //Pese a que cambia el mismo caracter, este método regresa un nuevo String, pues hubo modificaciones en el objeto, aunque sea el mismo contenido
-//		
-//		System.out.println(s1 == s2);
-//		System.out.println(s1 == s3);
-//		System.out.println(s1 == s4);
-//		System.out.println(s1 == s5);
-//		System.out.println("++++++++++++++++++++++");
-//		System.out.println(s2 == s1);
-//		System.out.println(s2 == s3);
-//		System.out.println(s2 == s4);
-//		System.out.println(s2 == s5);
-//		System.out.println("++++++++++++++++++++++");
-//		System.out.println(s3 == s1);
-//		System.out.println(s3 == s2);
-//		System.out.println(s3 == s4);
-//		System.out.println(s3 == s5);
-//		System.out.println("++++++++++++++++++++++");
-//		System.out.println(s4 == s1);
-//		System.out.println(s4 == s2);
-//		System.out.println(s4 == s3);
-//		System.out.println(s4 == s5);
-//		System.out.println("++++++++++++++++++++++");
-//		System.out.println(s5 == s1);
-//		System.out.println(s5 == s2);
-//		System.out.println(s5 == s3);
-//		System.out.println(s5 == s4);
-//		System.out.println("++++++++++++++++++++++");
-//		
-//	}
+	private static void prueba2() {
+		
+		String s1, s2, s3, s4, s5;
+		
+		s1 = "java";
+		s2 = s1.replace('A', 'a'); //Cuando se remplaza un char que no esta en el String regresa el mismo objeto
+		s3 = s1.replace('a', 'a'); //Cuando se remplaza un char por si mismo regresa el mismo objeto, esto aplica solo con el metodo de char
+		s4 = s1.replace("A", "a"); //Cuando se remplaza un String que no esta en el String regresa el mismo objeto, esto porque no hubo cambios en el
+		s5 = s1.replace("a", "a"); //Pese a que cambia el mismo caracter, este método regresa un nuevo String, pues hubo modificaciones en el objeto, aunque sea el mismo contenido
+		
+		System.out.println(s1 + " - " + s2 + " - " + s3 + " - " + s4 + " - ");
+		
+		System.out.println(s1 == s2);
+		System.out.println(s1 == s3);
+		System.out.println(s1 == s4);
+		System.out.println(s1 == s5);
+		System.out.println("++++++++++++++++++++++");
+		System.out.println(s2 == s1);
+		System.out.println(s2 == s3);
+		System.out.println(s2 == s4);
+		System.out.println(s2 == s5);
+		System.out.println("++++++++++++++++++++++");
+		System.out.println(s3 == s1);
+		System.out.println(s3 == s2);
+		System.out.println(s3 == s4);
+		System.out.println(s3 == s5);
+		System.out.println("++++++++++++++++++++++");
+		System.out.println(s4 == s1);
+		System.out.println(s4 == s2);
+		System.out.println(s4 == s3);
+		System.out.println(s4 == s5);
+		System.out.println("++++++++++++++++++++++");
+		System.out.println(s5 == s1);
+		System.out.println(s5 == s2);
+		System.out.println(s5 == s3);
+		System.out.println(s5 == s4);
+		System.out.println("++++++++++++++++++++++");
+		
+	}
 	
-//	public static void main(String[] args) {
-//		
-//		String s1 = "hello"; //se crea en el String pool
-//		var v1 = s1.toCharArray();
-//		StringBuilder sb1 = new StringBuilder();
-//		for (var c : v1) sb1.append(c);
-//		String s2 = sb1.toString(); //Regresa un objeto tipo string que esta en el Stack
-//		
-//		System.out.println(s1 == s2); //No son el mismo objeto
-//		System.out.println(s1.equals(s2));  //Son del mismo tipo de instancia y tienen el mismo contenido
-//		System.out.println(s1.equals(sb1)); //Tienen el mismo contenido, pero no son del mismo tipo de instancia
-//		System.out.println(s1.equals(v1)); //Tienen el mismo contenido, pero no son del mismo tipo de instancia
-//		
-//		s1 = s1.intern();
-//		s2 = s2.intern();
-//		System.out.println(s1 == s2); //No son el mismo objeto
-//		System.out.println(s1.equals(s2));  //Son del mismo tipo de instancia y tienen el mismo contenido
-//	}
+	private static void prueba3() {
+		
+		String s1 = "hello"; //se crea en el String pool
+		var v1 = s1.toCharArray();
+		StringBuilder sb1 = new StringBuilder();
+		for (var c : v1) sb1.append(c);
+		String s2 = sb1.toString(); //Regresa un objeto tipo string que esta en el Stack
+		
+		System.out.println(s1 == s2); //No son el mismo objeto
+		System.out.println(s1.equals(s2));  //Son del mismo tipo de instancia y tienen el mismo contenido
+		System.out.println(s1.equals(sb1)); //Tienen el mismo contenido, pero no son del mismo tipo de instancia
+		System.out.println(s1.equals(v1)); //Tienen el mismo contenido, pero no son del mismo tipo de instancia
+		
+		s1 = s1.intern();
+		s2 = s2.intern();
+		System.out.println(s1 == s2); //No son el mismo objeto
+		System.out.println(s1.equals(s2));  //Son del mismo tipo de instancia y tienen el mismo contenido
+	}
 	
-//	public static void main(String[] args) {		
-//
-//		String s1 = new String("string");
-//		String s2 = new String("string");
-//		String s3 = s1;
-//		
-//		System.out.println(s1.equals(s2) + "    " + (s1 == s2));
-//		System.out.println(s1.equals(s3) + "    " + (s1 == s3));
-//		System.out.println(s3.equals(s2) + "    " + (s3 == s2));
-//		System.out.println("-------------------");
-//		
-//		s1 = s1.intern();
-//		s2 = "string";		
-//		s3 = "String".toLowerCase(); //crea un nuevo objeto en el Stack, no en el String pool
-//		
-//		System.out.println(s1.equals(s2) + "    " + (s1 == s2));
-//		System.out.println(s1.equals(s3) + "    " + (s1 == s3));
-//		System.out.println(s3.equals(s2) + "    " + (s3 == s2));
-//		System.out.println("-------------------");
-//		
-//		s3 = "String".toLowerCase().intern(); //manda el objeto al String pool en el mismo paso
-//		
-//		System.out.println(s1.equals(s2) + "    " + (s1 == s2));
-//		System.out.println(s1.equals(s3) + "    " + (s1 == s3));
-//		System.out.println(s3.equals(s2) + "    " + (s3 == s2));
-//		
-//		
-//		System.out.println("-------------------");
-//		s1 = "\t \n";
-//		System.out.println("s1: " + s1.isBlank() + "  " + s1.isEmpty());
-//		
-//		System.out.println("-------------------");
-//		s1 = "    Hola \t c a r a\t d e \t b o l a \n";
-//		System.out.println("s1:" + s1.strip() + "-" + s1.trim() + "-");
-//	}	
+	private static void prueba4() {		
+
+		String s1 = new String("string");
+		String s2 = new String("string");
+		String s3 = s1;
+		
+		System.out.println(s1.equals(s2) + "    " + (s1 == s2));
+		System.out.println(s1.equals(s3) + "    " + (s1 == s3));
+		System.out.println(s3.equals(s2) + "    " + (s3 == s2));
+		System.out.println("-------------------");
+		
+		s1 = s1.intern();
+		s2 = "string";		
+		s3 = "String".toLowerCase(); //crea un nuevo objeto en el Stack, no en el String pool
+		
+		System.out.println(s1.equals(s2) + "    " + (s1 == s2));
+		System.out.println(s1.equals(s3) + "    " + (s1 == s3));
+		System.out.println(s3.equals(s2) + "    " + (s3 == s2));
+		System.out.println("-------------------");
+		
+		s3 = "String".toLowerCase().intern(); //manda el objeto al String pool en el mismo paso
+		
+		System.out.println(s1.equals(s2) + "    " + (s1 == s2));
+		System.out.println(s1.equals(s3) + "    " + (s1 == s3));
+		System.out.println(s3.equals(s2) + "    " + (s3 == s2));
+		
+		
+		System.out.println("-------------------");
+		s1 = "\t \n";
+		System.out.println("s1: " + s1.isBlank() + "  " + s1.isEmpty());
+		
+		System.out.println("-------------------");
+		s1 = "    Hola \t c a r a\t d e \t b o l a \n";
+		System.out.println("s1:" + s1.strip() + "-" + s1.trim() + "-");
+	}	
 }

@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics.interfaz;
+package javaStuff.javaBasics.interfaz;
 
 public interface I1 {
 	boolean m(Integer I1, Integer I2); //modifcador de acceso default

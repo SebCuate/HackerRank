@@ -1,4 +1,4 @@
-package JavaStuff;
+package javaStuff;
 
 import implement.InvocaValidatorCFD33;
 

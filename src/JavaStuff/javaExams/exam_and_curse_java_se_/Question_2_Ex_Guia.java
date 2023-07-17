@@ -1,4 +1,4 @@
-package JavaStuff.javaExams.exam_and_curse_java_se_;
+package javaStuff.javaExams.exam_and_curse_java_se_;
 public class Question_2_Ex_Guia {
 	
 	public static void main(String[] args) {

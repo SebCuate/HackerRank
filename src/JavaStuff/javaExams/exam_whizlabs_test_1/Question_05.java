@@ -1,4 +1,4 @@
-package exam_whizlabs_test_1;
+package javaStuff.javaExams.exam_whizlabs_test_1;
 
 
 //Incorrect
@@ -9,9 +9,9 @@ public class Question_05 {
 
 interface Foo {
 
-	void methodA() { }  //Las llaves hacen que se declare un cuerpo en el método
-	static void methodB(); //En una interface, un metodo estatico debe tener cuerpo
-	protected void methodC(); //no puede haber metodos protegidos en una interface
+//	void methodA() { }  //Las llaves hacen que se declare un cuerpo en el método
+//	static void methodB(); //En una interface, un metodo estatico debe tener cuerpo
+//	protected void methodC(); //no puede haber metodos protegidos en una interface
 	public void methodD();
 
 }

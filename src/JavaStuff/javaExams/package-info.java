@@ -5,4 +5,4 @@
  * @author SebasCU
  *
  */
-package JavaStuff.javaExams;
+package javaStuff.javaExams;

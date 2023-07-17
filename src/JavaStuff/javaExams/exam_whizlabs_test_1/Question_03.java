@@ -1,4 +1,4 @@
-package exam_whizlabs_test_1;
+package javaStuff.javaExams.exam_whizlabs_test_1;
 
 //Domain :Working with Java Arrays
 public class Question_03 {

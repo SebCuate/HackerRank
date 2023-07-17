@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics.strings;
+package javaStuff.javaBasics.strings;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

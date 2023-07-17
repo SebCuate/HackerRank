@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics.usingMethods;
+package javaStuff.javaBasics.usingMethods;
 
 public class Exer2_firmas {
 

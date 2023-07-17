@@ -1,11 +1,11 @@
-package exam_whizlabs_test_1;
+package javaStuff.javaExams.exam_whizlabs_test_1;
 
 public class Question_02 {
 
 	byte b = 100; // Line 1
 	short s = 'A'; // Line 2
-	char c = "A"; // Line 3
-	float f = 1.0; // Line 4
+//	char c = "A"; // Line 3
+//	float f = 1.0; // Line 4
 	double d = 1; // Line 5
 	
 //A: Line 1

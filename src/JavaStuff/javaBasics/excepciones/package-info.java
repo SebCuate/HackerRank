@@ -1,1 +1,1 @@
-package JavaStuff.javaBasics.excepciones;
+package javaStuff.javaBasics.excepciones;

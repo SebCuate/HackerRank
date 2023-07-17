@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics.interfaz;
+package javaStuff.javaBasics.interfaz;
 
 public interface I2 {
 	//modifcador de acceso privado: los métodos definidos así deben serlo

@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics.usingMethods;
+package javaStuff.javaBasics.usingMethods;
 
 public class Exer1_ConInterfaz {
 	
@@ -31,5 +31,5 @@ interface I3{
 	default boolean m(long i1, long i2){//modifcador de acceso privado por default
 		return i1 == i2;
 	}
-	static void m();//modifcador de acceso privado: los métodos definidos así deben serlo
+	static void m() {};//modifcador de acceso privado: los métodos definidos así deben serlo
 }

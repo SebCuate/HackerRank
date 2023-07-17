@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics.excepciones;
+package javaStuff.javaBasics.excepciones;
 
 import java.io.IOException;
 

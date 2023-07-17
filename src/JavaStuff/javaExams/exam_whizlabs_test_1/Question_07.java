@@ -1,4 +1,4 @@
-package exam_whizlabs_test_1;
+package javaStuff.javaExams.exam_whizlabs_test_1;
 
 public class Question_07 {
 

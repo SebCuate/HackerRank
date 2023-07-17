@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics.herencia;
+package javaStuff.javaBasics.herencia;
 
 public class TestInstanceIOf {
 	public static void main(String args[]) {

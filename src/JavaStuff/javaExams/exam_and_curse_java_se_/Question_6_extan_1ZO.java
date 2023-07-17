@@ -1,4 +1,4 @@
-package JavaStuff.javaExams.exam_and_curse_java_se_;
+package javaStuff.javaExams.exam_and_curse_java_se_;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics.arraysWork;
+package javaStuff.javaBasics.arraysWork;
 
 import java.util.Arrays;
 import java.util.List;

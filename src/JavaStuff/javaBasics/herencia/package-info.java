@@ -1,1 +1,1 @@
-package JavaStuff.javaBasics.herencia;
+package javaStuff.javaBasics.herencia;

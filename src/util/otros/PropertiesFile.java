@@ -1,4 +1,4 @@
-package javaStuff;
+package util.otros;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

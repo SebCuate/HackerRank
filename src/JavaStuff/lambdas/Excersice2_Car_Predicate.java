@@ -34,10 +34,10 @@ public class Excersice2_Car_Predicate {
 //        } );
 //        System.out.println(carsByCompany);
 		
-		CarMall2 cm = new CarMall2();
-		CarFilter2 cf = new CompanyFilter2("Honda");
-		List<Excersice2_Car_Predicate> carsByCompany = cm.showCars2(cf);
-		System.out.println(carsByCompany);
+//		CarMall2 cm = new CarMall2();
+//		CarFilter2 cf = new CompanyFilter2("Honda");
+//		List<Excersice2_Car_Predicate> carsByCompany = cm.showCars2(cf);
+//		System.out.println(carsByCompany);
 	}
 	
 }
@@ -64,20 +64,20 @@ class CarMall2 {
 	List<Excersice2_Car_Predicate> showCars2(CarFilter2<Excersice2_Car_Predicate> cp){
         ArrayList<Excersice2_Car_Predicate> carsToShow = new ArrayList<>();
         for(Excersice2_Car_Predicate c : cars){
-            if(cp.test(c)) carsToShow.add(c);
+//            if(cp.test(c)) carsToShow.add(c);
         }
         return carsToShow;
     }
 }
 
-class CompanyFilter2 implements CarFilter2 {
-	private String company;
-
-	public CompanyFilter2(String c) {
-		this.company = c;
-	}
-
-	public boolean showCar2(Excersice2_Car_Predicate c) {
-		return company.equals(c.company);
-	}
-}
+//class CompanyFilter2 implements CarFilter2 {
+//	private String company;
+//
+//	public CompanyFilter2(String c) {
+//		this.company = c;
+//	}
+//
+//	public boolean showCar2(Excersice2_Car_Predicate c) {
+//		return company.equals(c.company);
+//	}
+//}

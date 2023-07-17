@@ -1,4 +1,4 @@
-package JavaStuff.javaBasics.strings;
+package javaStuff.javaBasics.strings;
 
 class Entero {
     public int valor;

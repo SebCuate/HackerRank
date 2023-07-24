@@ -5,7 +5,7 @@ public class LcmGfm {
 	public static void main(String[] args) {
 
 		int a = 57;
-		int b = 38;
+		int b = 37;
 
 		System.out.println("The GCF of " + a + " and " + b + " is: " + GCF(a, b));
 		System.out.println("The LCM of " + a + " and " + b + " is: " + LCM(a, b));

@@ -73,7 +73,12 @@ public class Fibonacci {
 
 		// calculation of
 		// Fn = 4*(Fn-1) + Fn-2
-		return ((evenFib(n.subtract(BigInteger.ONE)).multiply(BigInteger.valueOf(4)))
+		return (
+				(evenFib(
+						n.subtract(BigInteger.ONE))
+						.multiply(BigInteger.valueOf(4)
+					)
+				)
 				.add(evenFib(n.subtract(BigInteger.valueOf(2)))));
 	}
 

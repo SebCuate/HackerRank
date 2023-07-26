@@ -72,7 +72,11 @@ public class Java1DArray {
 //		}
 //		return true;
 //    }
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 797af5b (pequeña travesura)
 	private static boolean canWin(int leap, int[] game, int i) {
 	    if (i >= game.length) {
 	        return true;

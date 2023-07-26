@@ -25,15 +25,18 @@ public class Java1DArray {
     public static void main(String[] args) {
     	
     	int[] leap = {
-    			3,5,3,1
+    			3,
+    			5,
+    			3,
+    			1
     			,41,8,5
     			,65,95
     		};
     	int[][] game = {
     			{0,0,0,0,0} 
     			,{0,0,0,1,1,1} 
-    			,{0,0,1,1,1,0} 
-    			,{0,1,0}
+    			,{0,0,1,1,1,1,0} 
+    			,{0,0,1,0}
     			,{0,0,0,0,0,1,0,1,0}
     			,{0,1,1,0,0,1,0,0,0,1,0,1,1}
     			,{0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,0,0,1,0,1,1,0,0,1,0,0,0,1,1,0,1,1,0,1,0,1,1,0,0,1,0,0,0,1,0,0,1,0,1,0,1,1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,1}
@@ -43,7 +46,7 @@ public class Java1DArray {
 //    	int[] leap = new int[game.length];
         
     	for(int i = 0; i < leap.length; i++) {
-    		System.out.println( (canWin(leap[i], game[i])) ? "YES" : "NO" );
+    		System.out.println( (canWin(leap[i], game[i], 0)) ? "YES" : "NO" );
     	}
     }
     
@@ -70,10 +73,6 @@ public class Java1DArray {
 //		return true;
 //    }
 	
-	public static boolean canWin(int leap, int[] game) {
-	    return canWin(leap, game, 0);
-	}
-
 	private static boolean canWin(int leap, int[] game, int i) {
 	    if (i >= game.length) {
 	        return true;

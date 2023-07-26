@@ -72,6 +72,7 @@ public class Java1DArray {
 //		}
 //		return true;
 //    }
+    
 	private static boolean canWin(int leap, int[] game, int i) {
 	    if (i >= game.length) {
 	        return true;

@@ -25,10 +25,7 @@ public class Java1DArray {
     public static void main(String[] args) {
     	
     	int[] leap = {
-    			3,
-    			5,
-    			3,
-    			1
+    			3,5,3,1
     			,41,8,5
     			,65,95
     		};

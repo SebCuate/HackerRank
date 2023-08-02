@@ -33,8 +33,13 @@ public class JavaLambdaExpressions {
 	public static void main(String[] args) {
 		
 		int [][] conditions = {
-			{1,4},
+			{2,2},
+			{2,3},
+			{2,4},
 			{2,5},
+			{2,6},
+			{2,7},
+			{2,11},
 			{3,898},
 			{1,3},
 			{2,12},
@@ -44,9 +49,9 @@ public class JavaLambdaExpressions {
 		for (int i = 0; i < conditions.length; i++) {
 	        switch (conditions[i][0]) {
 	        //Forma 1
-	            case 1 -> System.out.println(isOdd.test(conditions[i][1]) ? "ODD" : "EVEN");
-	            case 2 -> System.out.println(isPrime.test(conditions[i][1]) ? "PRIME" : "COMPOSITE");
-	            case 3 -> System.out.println(isPalindrome.test(conditions[i][1]) ? "PALINDROME" : "NOT PALINDROME");
+	            case 1 -> System.out.println(conditions[i][1] + " - " + (isOdd.test(conditions[i][1]) ? "ODD" : "EVEN"));
+	            case 2 -> System.out.println(conditions[i][1] + " - " + (isPrime.test(conditions[i][1]) ? "PRIME" : "COMPOSITE"));
+	            case 3 -> System.out.println(conditions[i][1] + " - " + (isPalindrome.test(conditions[i][1]) ? "PALINDROME" : "NOT PALINDROME"));
 	        //Forma 2
 //            case 1 -> System.out.println(isOdd2().check(conditions[i][1]) ? "ODD" : "EVEN");
 //            case 2 -> System.out.println(isPrime2().check(conditions[i][1]) ? "PRIME" : "COMPOSITE");
@@ -62,7 +67,10 @@ public class JavaLambdaExpressions {
 	//Forma 1 Creando solo las lambdas
 	static Predicate<Integer> isOdd = (n) -> n % 2 != 0;
 	static Predicate<Integer> isPrime = (n) -> {
-		for(int i = 3 ; i < n ; i++) {
+		if(n % 2 == 0 && n > 2) return false;
+		if(n % 3 == 0 && n > 3) return false;
+		if(n % 5 == 0 && n > 5) return false;
+		for(int i = 7 ; i<n && i%2 != 0 && i%3 != 0 && i%5 != 0; i++) {
             if(n % i == 0) return false;
         }
         return true;

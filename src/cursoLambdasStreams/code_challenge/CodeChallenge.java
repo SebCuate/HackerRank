@@ -1,11 +1,6 @@
 package cursoLambdasStreams.code_challenge;
 
-import java.math.BigInteger;
 import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
 @FunctionalInterface
@@ -96,12 +91,12 @@ public class CodeChallenge {
         int[] isOddCases = {3,7,9,2,8};
         int[] isPrimeCases = {2,31,97,42,98};
         int[] isPalindromeCases = {54322345,710101017,888,7848729,783483002};
-//        System.out.println("Odd test");
-//        Arrays.stream(isOddCases).forEach(i -> System.out.println(isOdd.check(i))); //true, true, true, false, false
+        System.out.println("Odd test");
+        Arrays.stream(isOddCases).forEach(i -> System.out.println(isOdd.check(i))); //true, true, true, false, false
         System.out.println("isPrime test");
         Arrays.stream(isPrimeCases).forEach(i -> System.out.println(isPrime.check(i))); //true, true, true, false, false
-//        System.out.println("isPalindrome test");
-//        Arrays.stream(isPalindromeCases).forEach(i -> System.out.println(isPalindrome.check(i))); //true, true, true, false, false
+        System.out.println("isPalindrome test");
+        Arrays.stream(isPalindromeCases).forEach(i -> System.out.println(isPalindrome.check(i))); //true, true, true, false, false
     }
 }
 
